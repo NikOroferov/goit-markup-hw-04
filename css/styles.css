@@ -86,7 +86,6 @@ img {
 /* index.html */
 
 .container {
-  /* outline: 1px solid tomato; */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -133,6 +132,9 @@ img {
 }
 
 .connection {
+  display: flex;
+  align-items: center;
+
   color: var(--primary-color-text);
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -140,6 +142,7 @@ img {
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  fill: var(--primary-color-text);
 }
 
 .connection-item:not(:last-child) {
@@ -151,11 +154,16 @@ img {
 .connection:focus,
 .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .connection-list {
   display: flex;
   margin-left: auto;
+}
+
+.icon-connection {
+  margin-right: 10px;
 }
 
 /* Hero */
@@ -168,7 +176,12 @@ img {
 
   text-align: center;
   background-color: var(--secondary-bcg-color);
-  background-image: url(../img/hero-img.jpg);
+  background-image: linear-gradient(
+      to top,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -222,6 +235,8 @@ img {
 }
 
 .advantages-title {
+  margin-top: 30px;
+
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -257,6 +272,27 @@ img {
 
   display: flex;
   flex-wrap: wrap;
+}
+
+.icon-background {
+  height: 120px;
+  width: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--third-bcg-color);
+}
+
+.icon-radar,
+.icon-clock,
+.icon-diagram,
+.icon-astonaut {
+  display: block;
+
+  height: 70px;
+  width: 70px;
 }
 
 .doing-list {
@@ -307,11 +343,17 @@ img {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding-bottom: 30px;
 
   flex-basis: calc(100% / 4 - var(--element-gap));
 
   background: var(--primary-bcg-color);
+}
+
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .team-title,
@@ -320,8 +362,6 @@ img {
 }
 
 .team-name {
-  margin-top: 30px;
-
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -339,6 +379,32 @@ img {
   line-height: 1.2;
 }
 
+.team-social {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 16px;
+}
+
+.container-social {
+  height: 44px;
+  width: 44px;
+}
+
+.social-link {
+  display: flex;
+
+  border-radius: 50px;
+  padding: 12px;
+  fill: rgba(175, 177, 184, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--white);
+}
+
 .container.client {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -346,10 +412,41 @@ img {
 }
 
 .client-list {
+  display: flex;
+  justify-content: space-between;
+
   margin-top: 50px;
 }
 
+.client-item:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid rgba(175, 177, 184, 1);
+  border-radius: 4px;
+
+  fill: rgba(175, 177, 184, 1);
+}
+
+.client-link:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
 /* Footer */
+
+.footer .container {
+  display: flex;
+}
 
 .footer {
   padding-top: 64px;
@@ -388,6 +485,41 @@ img {
 .address-list,
 .address-item:not(:first-child) {
   margin-top: 10px;
+}
+
+.footer-side {
+  display: inline-block;
+}
+
+.footer-title {
+  margin-top: 12px;
+
+  color: var(--white);
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-social {
+  display: flex;
+  margin-top: 20px;
+}
+
+.social-link.foot {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.foot-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link.foot:hover,
+.social-link.foot:focus {
+  background-color: var(--accent-color);
 }
 
 /* portfolio.html */
