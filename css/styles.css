@@ -155,6 +155,7 @@ img {
 .link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
+  outline: none;
 }
 
 .connection-list {
@@ -223,6 +224,7 @@ img {
 .hero-link:focus {
   background: var(--third-bcg-color);
   color: var(--secondary-bcg-color);
+  outline: none;
 }
 
 /* Adventages/Doing */
@@ -403,6 +405,7 @@ img {
 .social-link:focus {
   background-color: var(--accent-color);
   fill: var(--white);
+  outline: none;
 }
 
 .container.client {
@@ -437,9 +440,11 @@ img {
   fill: rgba(175, 177, 184, 1);
 }
 
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
+  outline: none;
 }
 
 /* Footer */
@@ -467,6 +472,7 @@ img {
 .footer-connection:hover,
 .footer-connection:focus {
   color: var(--accent-color);
+  outline: none;
 }
 
 .address {
@@ -521,6 +527,7 @@ img {
 .social-link.foot:hover,
 .social-link.foot:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 
 /* portfolio.html */
@@ -588,8 +595,7 @@ img {
   flex-basis: calc(100% / 3 - var(--cards-gap));
 }
 
-.cards-item:hover,
-.cards-item:focus {
+.cards-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
